@@ -1,7 +1,7 @@
 import MinePage from '../public/shop/MinePage'
 import HomePage from '../public/shop/HomePage'
 import ListPage from '../public/shop/ListPage'
-import FindPage from '../public/shop/FindPage'
+import CartPage from '../public/shop/CartPage'
 
 var express = require('express');
 var router = express.Router();
@@ -20,8 +20,8 @@ router.post('*', function(req, res, next) {
     case 'ListPage':
       ListPage(req, res)
       break
-    case 'FindPage':
-      FindPage(req, res)
+    case 'CartPage':
+      CartPage(req, res)
       break
     case 'MinePage':
       MinePage(req, res)

@@ -9,7 +9,7 @@ function px2dp(uiElementPx) {
   return uiElementPx * PHONE_SCREEN_WIDTH / SCREEN_WIDTH
 }
 
-export default function FindPage(req, res) {
+export default function CartPage(req, res) {
   let params = req.query
   console.log(params)
 /*  let screen_width = req.body.screen_width || 720
@@ -20,21 +20,28 @@ export default function FindPage(req, res) {
 
   let data = {
     'header':{
-      'title':'FindPage',
+      'title':'购物车',
       'hideRight':true
     },
     "cards":[
       {
         "name": "EntryCard",
         "data": {
-          "leftText": 'FindPage刷新本页面',
+          "leftText": 'CartPage刷新本页面',
           'showRightImage':true,
           "navigate" : {"type":"handle", "method": "host_refresh" }
         }
       },
-      FindPage
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": 'CartPage刷新本页面',
+          'showRightImage':true,
+          "navigate" : {"type":"handle", "method": "host_refresh" }
+        }
+      },
     ]
   }
-  res.send({ returnCode: '200', data: data, page: "FindPage" })
+  res.send({ returnCode: '200', data: data, page: "CartPage" })
 }
 

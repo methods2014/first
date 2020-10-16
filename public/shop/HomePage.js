@@ -20,46 +20,70 @@ export default function HomePage(req, res) {
 
   let data = {
     'header':{
-      'title':'HomePage',
-      'hideRight':true
+      'title':'快速开发框架-电商',
+      'hideRight':true,
+      'hideLeft':true
     },
     "cards":[
-      {
+/*      {
         "name": "EntryCard",
         "data": {
           "leftText": 'HomePage刷新本页面',
-          'showRightImage':true,
+          'showRightImage':false,
           "navigate" : {"type":"handle", "method": "host_refresh" }
+        }
+      },*/
+      {
+        name: 'ImageCard',
+        data: {
+          imgUrl: 'http://123.56.254.117:9000/shop/ad002.png',
         }
       },
       {
         name: 'SimpleCard',
         data: {
-          title: 'SimpleCard卡片',
+          title: '快速开发App从这里开始',
         }
       },
       {
         name: 'EntryListCard',
         data: [
-          {"conner":"","name":"活期乐","icon":"https://static.jsfund.cn/lcj/images/20200709/df642998e6ee49d587d95a4c32840c61.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"CurrentGladScreen"}},
-          {"conner":"","name":"买理财","icon":"https://static.jsfund.cn/lcj/images/20200709/1b953f9dc2ae40ce9f1bf721070eaef7.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"FinancingChannel"}},
-          {"conner":"","name":"买基金","icon":"https://static.jsfund.cn/lcj/images/20200709/a7da1aeb8d9d48a599d42c2875d3f95d.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"FundList"}},
-          {"conner":"","name":"我的关注","icon":"https://static.jsfund.cn/lcj/images/20200709/4a0ab436fd9f44f7b6ab1c447d11d609.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"CollectionAndAttention"}},
-          {"conner":"","name":"建仓宝","icon":"https://static.jsfund.cn/lcj/images/20200709/7708868d8fce4576b339e187f8de2969.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"JcbAdd"}},
-          {"conner":"","name":"工资宝","icon":"https://static.jsfund.cn/lcj/images/20200709/f88c96c27cc4492590a6779d83de6f1b.png",navigate : {type:'jump',"activeUrl":"https://static.jsfund.cn/lcj/functions/salary/salaryEntrance.html"}},
-          {"conner":"","name":"定投宝","icon":"https://static.jsfund.cn/lcj/images/20200709/b04424914e334413863b5293c32027f3.png",navigate : {type:'jump',"activeUrl":"https://static.jsfund.cn/lcj/functions/zydt/indexEntrance.html"}},
-          {"conner":"智盈理财","name":"预约提醒","icon":"https://static.jsfund.cn/lcj/images/20200709/018a7b539ea04f90a446a7a29be5f94a.png",navigate : {type:'jump',"activeUrl":"https://trade.jsfund.cn/dshd/wisdomIndex/index.html"}}
+          {"conner":"","name":"数码","icon":"http://123.56.254.117:9000/shop/entry_digital.png"},
+          {"conner":"","name":"百货","icon":"http://123.56.254.117:9000/shop/entry_goods.png"},
+          {"conner":"","name":"箱包","icon":"http://123.56.254.117:9000/shop/entry_bag.png"},
+          {"conner":"","name":"图书","icon":"http://123.56.254.117:9000/shop/entry_book.png"},
+          {"conner":"","name":"手机","icon":"http://123.56.254.117:9000/shop/entry_digital.png"},
+          {"conner":"","name":"日用","icon":"http://123.56.254.117:9000/shop/entry_goods.png"},
+          {"conner":"","name":"购物","icon":"http://123.56.254.117:9000/shop/entry_bag.png"},
+          {"conner":"","name":"书籍","icon":"http://123.56.254.117:9000/shop/entry_book.png"},
         ]
-      }/*,
+      },
       {
         name: 'CarouselCard',
         data: [
-          {"imgUrl":"https://static.jsfund.cn/lcj/images/20200711/20b2ba4f7d2c432ea1173792914ca8e5.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"https://static.jsfund.cn/lcj/zipfile/share/e33f28aa0ab94a35a13ffc194e917981/index.html?envir=app","pageName":""}},
-          {"imgUrl":"https://static.jsfund.cn/lcj/images/20200703/b31b1791192f41e18e4294fd85dcd596.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"https://static.jsfund.cn/lcj/zipfile/share/f8f8655ed1df4726a157c329902cfeb4/index.html","pageName":""}},
-          {"imgUrl":"https://static.jsfund.cn/lcj/images/20200603/cc6cab94e7124540a89353b4cc34f186.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"","pageName":"JcbAdd"}},
-          {"imgUrl":"https://static.jsfund.cn/lcj/images/20200603/29707956a7134d69a2267998bd576208.png",navigate : {type:'jump',"pageParas":{},"activeUrl":"https://trade.jsfund.cn/dshd/investorEducation/index.html?state=app","pageName":""}}
+          {"imgUrl":"http://123.56.254.117:9000/shop/Carousel1.jpg"},
+          {"imgUrl":"http://123.56.254.117:9000/shop/Carousel2.jpg"},
+          {"imgUrl":"http://123.56.254.117:9000/shop/Carousel3.jpg"},
         ]
-      }*/
+      },
+      {
+        name: 'FlatListCard',
+        data: {
+          items: [
+            {imgUrl: 'http://123.56.254.117:9000/shop/item01.png', desc:'巴掌大小迷你胖乎壶，1L大肚腩的保温壶', price:'￥79'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item02.png', desc:'精致迷你破壁机350mL', price:'￥299'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item03.png', desc:'精致吹风机', price:'￥229'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item04.png', desc:'龙胆黄酒', price:'￥68'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item05.png', desc:'菲律普电动牙刷', price:'￥199'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item06.png', desc:'透气记忆枕', price:'￥78'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item07.png', desc:'办公室午休神器，无线穴位指压按摩器', price:'￥369'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item10.png', desc:'气泡理疗按摩泡脚', price:'￥319'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item08.png', desc:'精美礼盒款，中秋送礼必备，无烟便携艾灸盒', price:'￥58'},
+            {imgUrl: 'http://123.56.254.117:9000/shop/item09.png', desc:'中医馆里的调养专家，智能立式艾灸器', price:'￥799'},
+
+              ]
+        }
+      }
     ]
   }
   res.send({ returnCode: '200', data: data, page: "HomePage" })

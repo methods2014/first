@@ -35,15 +35,48 @@ export default function MinePage(req, res) {
       {
         "name": "EntryCard",
         "data": {
-          "leftText": '关于',
+          "leftText": '快跑的昵称',
+          "rightText": '钻石会员',
+          'showRightText':true
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '商品收藏',
+          "rightText": '15',
+          'showRightText':true
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '关注店铺',
+          "rightText": '22',
+          'showRightText':true
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '全部订单',
+          "rightText": '6',
+          'showRightText':true
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '收货地址',
           'showRightImage':true
         }
       },
       {
         "name": "EntryCard",
         "data": {
-          "leftText": '联系开发者',
-          'showRightImage':true
+          "leftText": '优惠券',
+          "rightText": '8张',
+          'showRightText':true
         }
       },
     ]
