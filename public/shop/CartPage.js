@@ -21,23 +21,30 @@ export default function CartPage(req, res) {
   let data = {
     'header':{
       'title':'购物车',
-      'hideRight':true
+      'hideRight':false,
+      'hideLeft':true
     },
     "cards":[
       {
-        "name": "EntryCard",
+        "name": "CartProductCard",
         "data": {
-          "leftText": 'CartPage刷新本页面',
-          'showRightImage':true,
-          "navigate" : {"type":"handle", "method": "host_refresh" }
+          imgUrl: 'http://123.56.254.117:9000/shop/item05.png',
+          desc:'菲律普电动牙刷',
+          price:'￥199',
+          count:1}
+      },
+      {
+        "name": "CartProductCard",
+        "data": {
+          imgUrl: 'http://123.56.254.117:9000/shop/item06.png', desc:'透气记忆枕', price:'￥78',
+          count:2
         }
       },
       {
-        "name": "EntryCard",
+        "name": "CartProductCard",
         "data": {
-          "leftText": 'CartPage刷新本页面',
-          'showRightImage':true,
-          "navigate" : {"type":"handle", "method": "host_refresh" }
+          imgUrl: 'http://123.56.254.117:9000/shop/item07.png', desc:'办公室午休神器，无线穴位指压按摩器', price:'￥369',
+          count:3
         }
       },
     ]
