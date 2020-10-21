@@ -20,63 +20,65 @@ export default function MinePage(req, res) {
 
   let data = {
     'header':{
-      'title':'我的页面1111233',
-      'hideRight':true
+      'title':'我的页面',
+      'hideRight':false,
+      'hideLeft':true
     },
     "cards":[
       {
-        "name": "EntryCard",
+        "name": 'UserCard',
         "data": {
-          "leftText": '刷新本页面',
-          'showRightImage':true,
-          "navigate" : {"type":"handle", "method": "host_refresh" }
+          "title": 'UserCard',
+        }
+      },
+      {
+        "name": 'Item3Card',
+        "data": {
+          "title": 'Item3Card',
+        }
+      },
+      {
+        "name": 'Item4Card',
+        "data": {
+          "title": 'Item4Card',
         }
       },
       {
         "name": "EntryCard",
         "data": {
-          "leftText": '快跑的昵称',
-          "rightText": '钻石会员',
-          'showRightText':true
-        }
-      },
-      {
-        "name": "EntryCard",
-        "data": {
-          "leftText": '商品收藏',
-          "rightText": '15',
-          'showRightText':true
-        }
-      },
-      {
-        "name": "EntryCard",
-        "data": {
-          "leftText": '关注店铺',
-          "rightText": '22',
-          'showRightText':true
-        }
-      },
-      {
-        "name": "EntryCard",
-        "data": {
-          "leftText": '全部订单',
-          "rightText": '6',
-          'showRightText':true
-        }
-      },
-      {
-        "name": "EntryCard",
-        "data": {
-          "leftText": '收货地址',
+          "leftText": '我的收货地址',
+          "leftImage":"http://123.56.254.117:9000/shop/address.png",
           'showRightImage':true
         }
       },
       {
         "name": "EntryCard",
         "data": {
-          "leftText": '优惠券',
-          "rightText": '8张',
-          'showRightText':true
+          "leftText": '帮助反馈',
+          "leftImage":"http://123.56.254.117:9000/shop/help.png",
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '设置',
+          "leftImage":"http://123.56.254.117:9000/shop/setting.png",
+          'showRightImage':true
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftImage":"http://123.56.254.117:9000/shop/laboratory.png",
+          "leftText": '新功能实验室',
+        }
+      },
+      {
+        "name": "EntryCard",
+        "data": {
+          "leftText": '关于我们',
+          "leftImage":"http://123.56.254.117:9000/shop/aboutme.png",
+          'showRightImage':true
         }
       },
     ]

@@ -24,6 +24,8 @@ export default function CartPage(req, res) {
       'hideRight':false,
       'hideLeft':true
     },
+    footer:{
+    },
     "cards":[
       {
         "name": "CartProductCard",
